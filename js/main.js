@@ -4,6 +4,7 @@ let overs = [...document.querySelectorAll(".over")],
     options = [...document.querySelectorAll(".cog .option")],
     filterImages = [...document.querySelectorAll(".filter")], 
     navbar = document.querySelector(".navbar"), 
+    navLis = [...document.querySelectorAll(".navbar li")],
     landing = document.querySelector(".landing > .container"), 
     angleUp = document.querySelector(".angle-up"), 
     landingBackground = document.querySelector(".landing .background"),
@@ -99,7 +100,14 @@ function landingAddAnimation() {
         landingAnimation.classList.add("animate__animated", "animate__pulse", "wow")
     }
 }
-
+// hide navbar board
+navLis.forEach((li) => {
+    li.onclick = () => {
+        if (window.innerWidth <= 991) {
+            li.parentElement.parentElement.classList.remove("show");
+        }
+    }
+})
 
 
 
