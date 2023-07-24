@@ -485,8 +485,7 @@ svg,
     justify-content: center;
     border-radius: 0 0 7px 7px;
 }
-.landing .box img, 
-.landing .box .text {
+.landing .box img {
     overflow: hidden;
 }
 .landing .box p {
